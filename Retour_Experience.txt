@@ -1,0 +1,27 @@
+L'objectif de ce projet était de faire une classification d'image avec un algorithme non supervisé.
+Il fallait:
+- un algorithme d'apprentissage non supervisé
+- une application
+- une automatisation de notification
+- en bonus mettre les images dans une base de données.
+
+
+Le choix des images a été la premiére difficulté , plus précisément comment s'y prendre pour créer un dataset sans label comment l'algo va reconnaître les classes? Les rares exemples de classifications d'image en non supervisé sont sur MINST ou digits de sklearn parce qu'il est facile de séparer les targets des features et on peut ensuite comparer les prédiction des labels réels.
+Je me suis alors diriger vers le dataset MINST. Autrement c'était pas mon choix de départ. Mais cela m'arrange pour un problème de mémoire dès que j'ai trop de données les algo ont du mal à tourner même sur collab ce qui n'est pas le cas avec ce dataset. Au moins je pourrais aller au bout de mon projet... enfin au bout de mon algo!
+
+J'ai essayer de crére la base de données avec mongodb au débit pensant que ça serat simple mais les images c'est plus complexes pour ne pas perde trop de temps j'ai préférer laisser le bonus à la fin s'il me rester du temps. Du coup avec le datset MINST c'est pas utile les images ne sont pas en local. 
+
+Ensuite l'automatisation des notifs a pris beaucoup de temps. J'ai été confronté aux probléme d'autorisation des boites mails. Le code fonctionne mais gmail bloque l'api malgré que je spécifie que c'est mon action. J'ai créer un compte Outlook c'est la même chose c'ets pas réussi à détourner les autorisations. Y a un myen d'après mes recherches d'un part c'ets bien compliqué et d'une autre j'ai surtout peur que ça déjoue la sécurité des boîtes mails, il semblerait que ça soit déconseillé. Du coup j'ai chercher une autre façon de faire et j'ai trouver une petite perle (notify) qui envoie des notifs c'est simple à installer.
+
+Le temps me manque pour l'application.
+
+Soures:
+https://notify.run/
+
+https://python.doctor/page-python-envoyer-mail-smtp
+
+https://stackabuse.com/how-to-send-emails-with-gmail-using-python/
+
+https://towardsdatascience.com/automatic-notification-to-email-with-python-810fd357d89c
+
+https://medium.com/datadriveninvestor/k-means-clustering-for-imagery-analysis-56c9976f16b6
