@@ -9,6 +9,7 @@ import numpy as np
 from sklearn import metrics
 from sklearn.metrics import accuracy_score
 import cv2
+from sklearn.decomposition import PCA
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
 
@@ -21,6 +22,11 @@ x_test = x_test/255.0
 # Redimmension des données d'entrée
 X_train = x_train.reshape(len(x_train),-1)
 X_test = x_test.reshape(len(x_test),-1)
+#PCA
+pca = PCA(.80)
+pca.fit(X_train)
+X_train = pca.transform(X_train)
+X_test = pca.transform(X_test)
 
 total_clusters = len(np.unique(y_test))
 # Initialisation du modèle K-means
@@ -59,7 +65,7 @@ st.title("Application Streamlit de classification d'image")
 st.header("Hello Streamlit")
 st.subheader("Choisissez une image!")
 # Text
-st.text("Télécharger votre image!")
+st.text("Télécharger votre image en cliquant sur browse files!")
 
 # telecharger les images
 import streamlit as st
@@ -85,7 +91,7 @@ size = (28, 28)
 image_resize = resize(gray,size,anti_aliasing=True)
 
 image_resize = image_resize.reshape(1, 28*28)
-
+image_resize = pca.transform(image_resize)
 predicted_cluster = kmeans.predict(image_resize)
 
 prediction = y_pred[[predicted_cluster]]
