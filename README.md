@@ -3,6 +3,14 @@
 Projet de classification d'image avec un modèle non supervisé.
 Data set: MINST 
 
+Puur lancer l'application streamlit il suffit de rentre dans le treminal de votre IDE :
+$ streamlit run app.py
+
+Un lien localhost va s'ouvrir sinon cliquer sur le lien qui va s'afficher.
+Sous le texte "Télécharger votre image!
+               Upload an image"
+cliquer sur le texte en rouge "browse files" une fenêtre va s'ouvrir pour télécharger ue image depuis vos dossiers. Choisissez une image et le tour est jouer!
+
 
 L'objectif de ce projet était de faire une classification d'image avec un algorithme non supervisé.
 Il fallait:
