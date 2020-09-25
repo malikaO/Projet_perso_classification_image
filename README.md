@@ -5,6 +5,12 @@ Data set: MINST
 
 Puur lancer l'application streamlit il suffit de rentre dans le treminal de votre IDE :
 
+$ pip install -r requirements.txt #si vous avez python 2
+
+$ pip3 install -r requirements.txt #si vous avez python3
+
+Ensuite :
+
 $ streamlit run app.py
 
 Un lien localhost va s'ouvrir sinon cliquer sur le lien qui va s'afficher.
