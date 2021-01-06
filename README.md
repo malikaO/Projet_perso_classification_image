@@ -1,7 +1,7 @@
 # Projet_perso_classification_image
 
 Projet de classification d'image avec un modèle non supervisé.
-Data set: MINST 
+Data set: MNIST 
 
 Puur lancer l'application streamlit il suffit de rentre dans le treminal de votre IDE :
 
